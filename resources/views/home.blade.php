@@ -20,7 +20,7 @@
       <div class="container hero-content">
          <div class="row align-items-center">
             <div class="col-lg-12">
-               <h1 class="banner-m1-txt pt-5 mt-5">zMake Your Brand Heard, <br>Not Just Seen</h1>
+               <h1 class="banner-m1-txt pt-5 mt-5">Make Your Brand Heard, <br>Not Just Seen</h1>
                <!-- <p class="banner-m2-txt">Your brand has something to say. Wishery helps to say it louder. Your brand deserves better than Canva templates and copy-paste captions!</p> -->
             </div>
          </div>
