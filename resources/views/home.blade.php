@@ -1,6 +1,7 @@
 @extends('layout.app')
 
-@section('title', 'Home - WishNew')
+@section('title', 'Digital Marketing Agency | SEO & Social Media Experts | IUHAA Wishery')
+@section('meta_description', 'Wishery is a performance-driven digital marketing company in Kochi, Kerala offering SEO, social media marketing, paid campaigns, web design & development, and video production.')
 
 @section('content')
    <style>
@@ -26,10 +27,10 @@
          </div>
       </div>
       <!-- <div class="position-absolute bottom-0 hero-scroll">
-               <div class="scroll-text">
-                  "CREATIVE. CREATE. CONVERT." &nbsp; &nbsp; "CREATIVE. CREATE. CONVERT." &nbsp; &nbsp; "CREATIVE. CREATE. CONVERT." &nbsp; &nbsp; "CREATIVE. CREATE. CONVERT." &nbsp; &nbsp; "CREATIVE. CREATE. CONVERT." &nbsp; &nbsp; "CREATIVE. CREATE. CONVERT." &nbsp; &nbsp; "CREATIVE. CREATE. CONVERT." &nbsp; &nbsp; "CREATIVE. CREATE. CONVERT." &nbsp; &nbsp; "CREATIVE. CREATE. CONVERT." &nbsp; &nbsp; "CREATIVE. CREATE. CONVERT." &nbsp; &nbsp;
-               </div>
-            </div> -->
+                  <div class="scroll-text">
+                     "CREATIVE. CREATE. CONVERT." &nbsp; &nbsp; "CREATIVE. CREATE. CONVERT." &nbsp; &nbsp; "CREATIVE. CREATE. CONVERT." &nbsp; &nbsp; "CREATIVE. CREATE. CONVERT." &nbsp; &nbsp; "CREATIVE. CREATE. CONVERT." &nbsp; &nbsp; "CREATIVE. CREATE. CONVERT." &nbsp; &nbsp; "CREATIVE. CREATE. CONVERT." &nbsp; &nbsp; "CREATIVE. CREATE. CONVERT." &nbsp; &nbsp; "CREATIVE. CREATE. CONVERT." &nbsp; &nbsp; "CREATIVE. CREATE. CONVERT." &nbsp; &nbsp;
+                  </div>
+               </div> -->
    </section>
    <section class="blue-bg" style="background:#0a1851;">
       <div class="container">
@@ -57,7 +58,7 @@
                   <li><img src="{{ url('images/clg8.png') }}" alt="logo-name"></li>
                   <li><img src="{{ url('images/clg9.png') }}" alt="logo-name"></li>
                   <!-- <li><img src="images/clg10.png" alt="logo-name"></li>
-                        <li><img src="images/clg11.png" alt="logo-name"></li> -->
+                           <li><img src="images/clg11.png" alt="logo-name"></li> -->
                </ul>
             </div>
          </div>
@@ -99,11 +100,11 @@
                </div>
             </div>
             <!-- <div class="item">
-                     <div class="carousel-card">
-                        <img src="https://thumbs.dreamstime.com/b/shopaholic-woman-purchases-38390374.jpg">
-                        <p class="caption">Search Engine Marketing</p>
-                     </div>
-                  </div> -->
+                        <div class="carousel-card">
+                           <img src="https://thumbs.dreamstime.com/b/shopaholic-woman-purchases-38390374.jpg">
+                           <p class="caption">Search Engine Marketing</p>
+                        </div>
+                     </div> -->
             <div class="item">
                <div class="carousel-card">
                   <img src="{{url('images/offline.jpg')}}">
@@ -162,13 +163,13 @@
             </div>
             <!-- Testimonial 4 -->
             <!--  <div class="testimonial-item">
-                     <div class="stars">★★★★★</div>
-                     <p>The easiest pricing plugin I've ever come across! The UI is intuitive, and it's super-easy to install, too!...</p>
-                     <a href="#" class="read-more">Read more</a>
-                     <div class="avatar"><img src="https://picsum.photos/50?random=4" alt="Marva"></div>
-                     <h5>Marva Flores</h5>
-                     <span>Surgical technician</span>
-                  </div> -->
+                        <div class="stars">★★★★★</div>
+                        <p>The easiest pricing plugin I've ever come across! The UI is intuitive, and it's super-easy to install, too!...</p>
+                        <a href="#" class="read-more">Read more</a>
+                        <div class="avatar"><img src="https://picsum.photos/50?random=4" alt="Marva"></div>
+                        <h5>Marva Flores</h5>
+                        <span>Surgical technician</span>
+                     </div> -->
          </div>
       </div>
    </section>

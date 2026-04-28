@@ -1,6 +1,7 @@
 @extends('layout.app')
 
-@section('title', 'About Us - Wishery')
+@section('title', 'About Wishery | Digital Marketing Experts in Kochi, Kerala')
+@section('meta_description', 'Wishery is a digital marketing agency in Kerala providing SEO, social media marketing, web design, branding, and video production to help businesses grow online.')
 
 @section('content')
   <!-- Inner Page Banner -->
@@ -21,11 +22,12 @@
         </div>
         <div class="col-lg-10 mb-4 mt-4" style="margin:0 auto">
           <p>
-            At Wishery, we specialize in crafting tailored marketing solutions that deliver measurable results. 
-            Our team combines creativity, technology, and data-driven strategies to help brands connect with their audience in meaningful ways.
+            At Wishery, we specialize in crafting tailored marketing solutions that deliver measurable results.
+            Our team combines creativity, technology, and data-driven strategies to help brands connect with their
+            audience in meaningful ways.
           </p>
           <p>
-            Whether it’s launching new campaigns, boosting visibility, or creating unforgettable brand experiences, 
+            Whether it’s launching new campaigns, boosting visibility, or creating unforgettable brand experiences,
             we aim to deliver excellence at every step.
           </p>
         </div>
@@ -39,7 +41,8 @@
     <div class="col-lg-10" style="margin:0 auto">
       <h2>Our Mission</h2>
       <p>
-        To empower businesses by providing innovative and customized marketing strategies that transform ideas into impactful results.
+        To empower businesses by providing innovative and customized marketing strategies that transform ideas into
+        impactful results.
       </p>
     </div>
   </section>
