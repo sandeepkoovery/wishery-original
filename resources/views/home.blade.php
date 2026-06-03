@@ -1,6 +1,6 @@
 @extends('layout.app')
 
-@section('title', 'Digital Marketing Agency | SEO & Social Media Experts | IUHAA Wishery')
+@section('title', 'Digital Marketing Agency in Kochi | SEO & Social Media Experts | IUHAA Wishery')
 @section('meta_description', 'Wishery is a performance-driven digital marketing company in Kochi, Kerala offering SEO, social media marketing, paid campaigns, web design & development, and video production.')
 
 @section('content')
