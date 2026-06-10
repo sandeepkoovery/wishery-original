@@ -1,4 +1,4 @@
-@extends('layout.app')
+﻿@extends('layout.app')
 
 @section('title', 'Digital Marketing Agency in Kochi | SEO & Social Media Experts | IUHAA Wishery')
 @section('meta_description', 'Wishery is a performance-driven digital marketing company in Kochi, Kerala offering SEO, social media marketing, paid campaigns, web design & development, and video production.')
@@ -34,10 +34,9 @@
    </section>
    <section class="blue-bg" style="background:#0a1851;">
       <div class="container">
-         <h3>What Makes Us Unique!</h3>
-         <div class="display-3">NO FLUFF. <br>JUST RESULT!</div>
-         <p class="mt-4">At Wishery, we blend smart social media marketing with creative production that truly connects. We
-            don’t just create things that look cool. We make stuff that gets results. That’s what makes us different!</p>
+         <h2>Digital Marketing Agency in Kochi</h2>
+         <p class="mt-4">Wishery is a leading digital marketing agency in Kochi, helping businesses across Kerala build a stronger online presence through strategic marketing, creative content, and performance-driven campaigns. Our services include SEO, social media marketing, Google Ads, Meta Ads, branding, website development, content creation, and digital marketing strategy. We focus on increasing brand visibility, attracting the right audience, and generating quality leads that support long-term business growth.</p>
+         <p class="mt-4">What makes Wishery different is our ability to combine digital marketing with professional video production and creative advertising. Our team of videographers, editors, designers, SEO specialists, social media marketers, and advertising experts work together to create engaging content and effective campaigns tailored to each brand. From ad shoots and social media content to search engine optimization and paid advertising, we deliver integrated digital solutions that help businesses connect with their audience and achieve meaningful results online.</p>
       </div>
    </section>
    <!-- Clients -->
