@@ -14,8 +14,9 @@
 
 <!-- Portfolio Section -->
 <section class="portfolio-inner py-5 blue-bg">
-  <div class="container">
-    <div class="row g-4 justify-content-center">
+  <div class="container text-center">
+    <h2 class="portfolio-section-title text-white mb-5">Commercial & Brand Videos</h2>
+    <div class="row g-4 justify-content-center text-start">
       @php
         $projects = [
           ['image' => asset('images/1a.jpeg'), 'name' => 'Rhythmbhara', 'video' => 'https://www.instagram.com/reel/DGnZ1lFBd3S/?utm_source=ig_web_button_share_sheet'],
@@ -30,7 +31,7 @@
       @endphp
 
       @foreach($projects as $project)
-      <div class="col-lg-4 col-md-6 d-flex">
+      <div class="col-lg-3 col-md-4 col-sm-6 d-flex">
         <div class="portfolio-card d-flex flex-column h-100 rounded-4 overflow-hidden shadow-sm position-relative">
           <div class="video-wrapper position-relative w-100">
             <div class="custom-video" data-video="{{ $project['video'] }}">
@@ -40,7 +41,48 @@
               </div>
             </div>
           </div>
-          <h5 class="text-center text-white py-3 mb-0">{{ $project['name'] }}</h5>
+          <h5 class="text-center text-white py-3 mb-0 fs-6">{{ $project['name'] }}</h5>
+        </div>
+      </div>
+      @endforeach
+    </div>
+  </div>
+</section>
+
+<!-- Instagram Videos Section -->
+<section class="portfolio-inner pb-5 blue-bg">
+  <div class="container text-center">
+    <h2 class="portfolio-section-title text-white mb-5">Instagram Reels</h2>
+    <div class="row g-4 justify-content-center text-start">
+      @php
+        $dummy_instagram_projects = [
+          ['image' => asset('images/reels1.jpeg'), 'name' => 'Grace', 'video' => 'https://www.instagram.com/reel/Da2tsYwgZ7y/?igsh=NGE1eGQzbnQ2eDY1'],
+          ['image' => asset('images/reels2.jpeg'), 'name' => 'Grace', 'video' => 'https://www.instagram.com/reel/DaN5OFWGFAt/?igsh=MXhtZG01YmtkZGk5MA%3D%3D'],
+          ['image' => asset('images/reels3.jpeg'), 'name' => 'Kalpaka Ayurveda', 'video' => 'https://www.instagram.com/reel/DaiGXHVjcrs/?igsh=MWh4bGh1MTlpamt1NA%3D%3D'],
+          ['image' => asset('images/reels4.jpeg'), 'name' => 'Kalpaka Ayurveda', 'video' => 'https://www.instagram.com/reel/Da4ZPK9BM6n/?igsh=bzdhc2c2aWQ2bjd6'],
+          ['image' => asset('images/reels6.jpeg'), 'name' => 'Kinder Hospitals', 'video' => 'https://www.instagram.com/reel/DXPOjuVk_W7/?igsh=eWl0cXFnZzk3b3kx'],
+          ['image' => asset('images/reels6.jpeg'), 'name' => 'Kinder Hospitals', 'video' => 'https://www.instagram.com/reel/DVixV8agSD4/?igsh=MTNiOWpjZjF4bWZ2cA%3D%3D'],
+          ['image' => asset('images/reels7.jpeg'), 'name' => 'Rhythmbhara', 'video' => 'https://www.instagram.com/reel/DVGKpjYgVng/?igsh=MWN1YTFvb2p3a2k1Mg%3D%3D'],
+          ['image' => asset('images/reels8.jpeg'), 'name' => 'Nailit By Gayathri Arun', 'video' => 'https://www.instagram.com/reel/DakpqS8ERSx/?igsh=MTdsMnhlNmN0NTFpMA%3D%3D'],
+          ['image' => asset('images/reels9.jpeg'), 'name' => 'Nailit By Gayathri Arun', 'video' => 'https://www.instagram.com/reel/DaAkmtZDljU/?igsh=MWh5N3NsbDQzcmh3'],
+          ['image' => asset('images/reels10.jpeg'), 'name' => 'Grace', 'video' => 'https://www.instagram.com/reel/DXtt7sOFJMu/?igsh=dWY3bXo3dHBmbzE5'],
+          ['image' => asset('images/reels11.jpeg'), 'name' => 'Grace', 'video' => 'https://www.instagram.com/reel/DN2n7RU2Kvk/?igsh=MW12bGJ5Y2Nlc3Vxag%3D%3D'],
+          ['image' => asset('images/reels12.jpeg'), 'name' => 'Kandamangalam', 'video' => 'https://www.instagram.com/reel/DH3co8PSjzm/?igsh=cm51bjN4bjVhbTJ5']
+        ];
+      @endphp
+
+      @foreach($dummy_instagram_projects as $project)
+      <div class="col-lg-3 col-md-4 col-sm-6 d-flex">
+        <div class="portfolio-card d-flex flex-column h-100 rounded-4 overflow-hidden shadow-sm position-relative">
+          <div class="video-wrapper position-relative w-100">
+            <div class="custom-video" data-video="{{ $project['video'] }}">
+              <img src="{{ $project['image'] }}" alt="{{ $project['name'] }}" class="img-fluid video-thumb w-100">
+              <div class="play-button">
+                <span class="play-icon"></span>
+              </div>
+            </div>
+          </div>
+          <h5 class="text-center text-white py-3 mb-0 fs-6">{{ $project['name'] }}</h5>
         </div>
       </div>
       @endforeach
@@ -57,6 +99,28 @@
 </div>
 
 <style>
+/* --- Section Titles --- */
+.portfolio-section-title {
+  font-size: 2.25rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  background: linear-gradient(135deg, #ffffff 40%, #ffc107 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  position: relative;
+  display: inline-block;
+}
+.portfolio-section-title::after {
+  content: '';
+  display: block;
+  width: 60px;
+  height: 4px;
+  background: #ffc107;
+  margin: 12px auto 0 auto;
+  border-radius: 2px;
+}
+
 /* --- Banner --- */
 .inner-banner {
   background: url('{{ url('images/portfolio.jpg') }}') center/cover no-repeat;
@@ -86,7 +150,7 @@
 .video-wrapper {
   position: relative;
   width: 100%;
-  aspect-ratio: 16 / 9;
+  aspect-ratio: 9 / 16;
   overflow: hidden;
   background: #000;
 }
