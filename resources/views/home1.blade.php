@@ -226,7 +226,7 @@
         <h2 class="text-start">Need Marketing Solution?</h2>
         <p>We’re here to help you!</p>
         <div class="contact-info">
-          <p><strong>Address:</strong><br>SRM Road, near NIRMALA SISU BHAVAN, Ayyappankavu, Ernakulam, Kerala 682018</p>
+          <p><strong>Address:</strong><br>90 A, Door no 55/1171, Canal Road , <br>Girinagar , Kadavanthara , <br>Kadavanthara Police station, <br>Ernakulam - 682020 , Kerala , India</p>
           <p><strong>Phone:</strong><br> +91 92079 44882</p>
           <p><strong>Email:</strong><br> Wisherypvtltd@gmail.com</p>
         </div>
