@@ -4,6 +4,170 @@
 @section('meta_description', 'Frequently asked questions about Wishery digital marketing services, video production, SEO, social media marketing, and customized business growth strategies.')
 
 @section('content')
+<style>
+  /* FAQ Screenshot-Exact Accordion Styles */
+  .faq-screenshot-section {
+    font-family: "Lato", sans-serif;
+    background-color: #ffffff;
+    padding: 60px 0 90px;
+    color: #1e293b;
+  }
+
+  .faq-custom-container {
+    max-width: 1280px;
+    width: 100%;
+  }
+
+  .faq-eyebrow {
+    font-family: "Lato", sans-serif;
+    color: #1a56db;
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 1.8px;
+    text-transform: uppercase;
+    margin-bottom: 12px;
+  }
+
+  .faq-eyebrow .faq-arrow {
+    margin-right: 5px;
+    font-weight: 800;
+    display: inline-block;
+  }
+
+  .faq-main-title {
+    font-family: "Lato", sans-serif;
+    color: #1e293b;
+    font-size: 42px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    margin-bottom: 35px;
+  }
+
+  @media (max-width: 768px) {
+    .faq-screenshot-section {
+      padding-top: 40px;
+      padding-bottom: 60px;
+    }
+    .faq-main-title {
+      font-size: 28px;
+    }
+  }
+
+  .faq-subtitle-text {
+    font-family: "Lato", sans-serif;
+    color: #64748b;
+    font-size: 17.5px;
+    font-weight: 400;
+    margin-bottom: 30px;
+    line-height: 1.6;
+  }
+
+  .faq-exact-accordion {
+    border-top: none;
+    border-bottom: none;
+  }
+
+  .faq-exact-accordion .accordion-item {
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid #edf0f4;
+    border-radius: 0 !important;
+    padding: 6px 0;
+  }
+
+  .faq-exact-accordion .accordion-item:last-child {
+    border-bottom: 1px solid #edf0f4;
+  }
+
+  .faq-exact-accordion .accordion-header {
+    margin: 0;
+  }
+
+  .faq-exact-accordion .accordion-button {
+    font-family: "Lato", sans-serif;
+    background: transparent !important;
+    box-shadow: none !important;
+    border: none;
+    padding: 18px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    text-align: left;
+    cursor: pointer;
+  }
+
+  .faq-exact-accordion .accordion-button::after {
+    display: none !important;
+  }
+
+  .faq-exact-accordion .faq-question-title {
+    font-family: "Lato", sans-serif;
+    color: #0f172a;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 1.45;
+    padding-right: 25px;
+    flex: 1;
+  }
+
+  .faq-exact-accordion .faq-toggle-circle {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    transition: all 0.2s ease;
+    font-size: 13px;
+  }
+
+  /* Collapsed State: light circle with grey plus */
+  .faq-exact-accordion .accordion-button.collapsed .faq-toggle-circle {
+    border: 1px solid #e2e8f0;
+    background-color: #ffffff;
+    color: #94a3b8;
+  }
+
+  .faq-exact-accordion .accordion-button.collapsed .faq-toggle-circle .icon-close {
+    display: none !important;
+  }
+
+  .faq-exact-accordion .accordion-button.collapsed .faq-toggle-circle .icon-open {
+    display: block !important;
+    font-size: 13px;
+  }
+
+  /* Open / Expanded State: solid dark navy circle with white cross */
+  .faq-exact-accordion .accordion-button:not(.collapsed) .faq-toggle-circle {
+    border: 1px solid #0b1a30;
+    background-color: #0b1a30;
+    color: #ffffff;
+  }
+
+  .faq-exact-accordion .accordion-button:not(.collapsed) .faq-toggle-circle .icon-close {
+    display: block !important;
+    font-size: 13px;
+  }
+
+  .faq-exact-accordion .accordion-button:not(.collapsed) .faq-toggle-circle .icon-open {
+    display: none !important;
+  }
+
+  .faq-exact-accordion .accordion-body {
+    font-family: "Lato", sans-serif;
+    padding: 4px 45px 22px 0;
+    color: #555e6d;
+    font-size: 16px;
+    line-height: 1.75;
+    font-weight: 400;
+    background: transparent;
+    text-align: left;
+  }
+</style>
+
   <!-- Inner Page Banner -->
   <section class="inner-banner" style="background: url('images/inner-bg.jpg') top/cover no-repeat;">
     <div class="content">
