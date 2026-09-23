@@ -12,6 +12,10 @@ Route::get('/about', [WebController::class,'about'])->name('about');
 Route::get('/services', [WebController::class,'services'])->name('services');
 Route::get('/portfolio', [WebController::class,'portfolio'])->name('portfolio');
 Route::get('/contact', [WebController::class, 'contact'])->name('contact');
+Route::get('/faqs', [WebController::class, 'faqs'])->name('faqs');
+Route::get('/faq', function () {
+    return redirect()->route('faqs');
+});
 Route::post('/contact', [ContactController::class, 'submit'])->name('contact.submit');
 Route::post('/contactus', [ContactController::class, 'contactusSubmit'])->name('contactus.page');
 Route::post('/send-contact-mail', [MailController::class, 'sendContactMail'])->name('send.contact.mail');

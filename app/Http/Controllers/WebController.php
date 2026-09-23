@@ -30,4 +30,9 @@ class WebController extends Controller
     {
         return view('contact');
     }
+
+    public function faqs()
+    {
+        return view('faqs');
+    }
 }

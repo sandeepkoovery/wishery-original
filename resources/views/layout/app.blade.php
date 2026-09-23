@@ -63,6 +63,7 @@
               <li class="nav-item"><a class="nav-link" href="{{url('services')}}">Services</a></li>
               <li class="nav-item"><a class="nav-link" href="{{url('portfolio')}}">Portfolio</a></li>
               <li class="nav-item"><a class="nav-link" href="{{url('contact')}}">Contact Us</a></li>
+              <li class="nav-item"><a class="nav-link" href="{{url('faqs')}}">Faqs</a></li>
             </ul>
             <!-- Desktop hamburger for more menu -->
             <span class="custom-toggler d-block d-sm-none ms-3" data-bs-toggle="offcanvas" data-bs-target="#mobileMenu">
@@ -84,6 +85,7 @@
         <a href="{{url('services')}}">Services</a>
         <a href="{{url('portfolio')}}">Portfolio</a>
         <a href="{{url('contact')}}">Contact Us</a>
+        <a href="{{url('faqs')}}">Faqs</a>
       </div>
     </div>
   </header>
