@@ -41,7 +41,10 @@
             font-family: 'Plus Jakarta Sans', sans-serif;
             background-color: var(--bg-dark);
             color: var(--text-main);
+            min-height: 100vh;
+            min-height: 100dvh;
             height: 100vh;
+            height: 100dvh;
             width: 100vw;
             overflow: hidden;
             position: relative;
@@ -158,12 +161,13 @@
             position: relative;
             flex: 1;
             z-index: 10;
-            overflow: hidden;
+            overflow-y: auto;
+            overflow-x: hidden;
             display: flex;
             align-items: center;
             justify-content: center;
-            padding: 20px;
-            height: calc(100vh - 140px);
+            padding: 16px;
+            padding-bottom: 90px;
         }
 
         #creatorForm {
@@ -189,7 +193,7 @@
             will-change: transform, opacity;
             padding: 16px;
             box-sizing: border-box;
-            max-height: calc(100vh - 160px);
+            max-height: calc(100dvh - 170px);
             overflow-y: auto;
         }
 
@@ -498,15 +502,24 @@
 
         /* Bottom Control Bar */
         .bottom-bar {
-            position: relative;
-            z-index: 20;
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            z-index: 99;
             display: flex;
             align-items: center;
             justify-content: space-between;
-            padding: 18px 32px;
-            background: rgba(7, 9, 19, 0.85);
-            backdrop-filter: blur(16px);
-            border-top: 1px solid rgba(255, 255, 255, 0.07);
+            padding: 14px 28px;
+            padding-bottom: max(14px, env(safe-area-inset-bottom));
+            background: rgba(7, 9, 19, 0.95);
+            backdrop-filter: blur(20px);
+            border-top: 1px solid rgba(255, 255, 255, 0.09);
+        }
+
+        /* Inline Slide Action Row - Hidden on Desktop */
+        .slide-action-row {
+            display: none;
         }
 
         .bottom-hints {
@@ -695,27 +708,120 @@
             box-shadow: 0 4px 15px rgba(253, 29, 29, 0.4);
         }
 
-        /* Mobile Adjustments */
-        @media (max-width: 640px) {
+        /* Mobile Adjustments (Mobile & Small Tablets) */
+        @media (max-width: 768px) {
+            /* Show Next and Previous buttons directly on slides in mobile view */
+            .slide-action-row {
+                display: flex;
+                align-items: center;
+                gap: 10px;
+                margin-top: 22px;
+                width: 100%;
+            }
+
+            .btn-inline-prev {
+                flex: 1;
+                background: rgba(255, 255, 255, 0.07);
+                border: 1px solid rgba(226, 186, 70, 0.35);
+                color: #ffffff;
+                height: 48px;
+                padding: 0 16px;
+                border-radius: 12px;
+                font-family: 'Outfit', sans-serif;
+                font-size: 15px;
+                font-weight: 700;
+                display: inline-flex;
+                align-items: center;
+                justify-content: center;
+                gap: 8px;
+                cursor: pointer;
+                transition: all 0.2s var(--ease-out-expo);
+                box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+            }
+
+            .btn-inline-prev:hover {
+                background: rgba(226, 186, 70, 0.15);
+                border-color: var(--gold-primary);
+                color: var(--gold-primary);
+            }
+
+            .btn-inline-prev:active {
+                transform: translateY(0);
+            }
+
+            .btn-inline-next {
+                flex: 1;
+                background: linear-gradient(135deg, #e2ba46 0%, #c59b27 100%);
+                color: #070913;
+                border: none;
+                border-radius: 12px;
+                height: 48px;
+                padding: 0 20px;
+                font-family: 'Outfit', sans-serif;
+                font-size: 15px;
+                font-weight: 700;
+                cursor: pointer;
+                display: inline-flex;
+                align-items: center;
+                justify-content: center;
+                gap: 8px;
+                transition: all 0.2s var(--ease-out-expo);
+                box-shadow: 0 4px 18px rgba(226, 186, 70, 0.35);
+            }
+
+            .btn-inline-next:hover {
+                background: linear-gradient(135deg, #f6d365 0%, #e2ba46 100%);
+            }
+
+            .inline-press-hint {
+                display: none;
+            }
+
+            .bottom-bar {
+                padding: 10px 16px;
+                padding-bottom: max(12px, env(safe-area-inset-bottom));
+            }
+
             .bottom-hints {
                 display: none;
             }
+
+            .nav-buttons {
+                width: 100%;
+                justify-content: space-between;
+                gap: 8px;
+            }
+
+            .btn-slide-nav {
+                width: 40px;
+                height: 40px;
+                border-radius: 10px;
+            }
+
+            .btn-primary-action {
+                flex: 1;
+                justify-content: center;
+                padding: 10px 14px;
+                font-size: 13.5px;
+            }
+
             .choices-grid {
                 grid-template-columns: 1fr;
-                max-height: 48vh;
+                max-height: 44vh;
             }
+
             .stage-container {
-                padding: 14px;
+                padding: 12px;
+                padding-bottom: 80px;
             }
+
             .slide {
-                padding: 4px;
+                padding: 6px;
+                max-height: calc(100dvh - 160px);
             }
-            .btn-primary-action {
-                padding: 10px 18px;
-                font-size: 14px;
-            }
+
             .q-desc {
-                margin-bottom: 18px;
+                margin-bottom: 16px;
             }
         }
     </style>
@@ -755,9 +861,13 @@
                     Are you ready to be the part of<br>
                     <span class="gold-accent">WISHERY</span> family?
                 </h1>
-                <p class="q-desc">
-                    WISHERY is looking for creators! We’re building a community of passionate creators across <strong>Kerala &amp; Tamil Nadu</strong>. If you love creating, storytelling, and bringing ideas to life, we’d love to welcome you. Let’s create something amazing together!
-                </p>
+                <div class="q-desc" style="display: flex; flex-direction: column; gap: 8px; margin-bottom: 22px;">
+                    <p style="font-weight: 700; color: #ffffff; font-size: 16px;">WISHERY is looking for creators!</p>
+                    <p>We’re building a community of passionate creators across <strong>Kerala &amp; Tamil Nadu</strong>.</p>
+                    <p>If you love creating, storytelling, and bringing ideas to life, we’d love to welcome you to the WISHERY Creator Family.</p>
+                    <p>If you’re interested in being part of the WISHERY CREATOR Family, kindly fill in your details below.</p>
+                    <p style="font-style: italic; color: var(--gold-primary); font-weight: 600;">Let’s create something amazing together!</p>
+                </div>
 
                 <div class="welcome-features">
                     <div class="welcome-pill"><i class="fa-solid fa-coins"></i> Paid Brand Collaborations</div>
@@ -784,6 +894,15 @@
                 <div class="slide-input-wrap">
                     <input type="text" name="full_name" id="full_name" class="slide-text-input" placeholder="Type your full name here..." autocomplete="name">
                     <div class="slide-error"><i class="fa-solid fa-circle-exclamation"></i> Please enter your name</div>
+                </div>
+
+                <div class="slide-action-row">
+                    <button type="button" class="btn-inline-prev" onclick="handlePrev()">
+                        <i class="fa-solid fa-arrow-left"></i> <span>Back</span>
+                    </button>
+                    <button type="button" class="btn-inline-next" onclick="handleNext()">
+                        <span>Next</span> <i class="fa-solid fa-arrow-right"></i>
+                    </button>
                 </div>
             </div>
 
@@ -817,6 +936,15 @@
                     </label>
                 </div>
                 <div class="slide-error"><i class="fa-solid fa-circle-exclamation"></i> Please select an option</div>
+
+                <div class="slide-action-row">
+                    <button type="button" class="btn-inline-prev" onclick="handlePrev()">
+                        <i class="fa-solid fa-arrow-left"></i> <span>Back</span>
+                    </button>
+                    <button type="button" class="btn-inline-next" onclick="handleNext()">
+                        <span>Next</span> <i class="fa-solid fa-arrow-right"></i>
+                    </button>
+                </div>
             </div>
 
             <!-- ================= SLIDE 3: Follower Count ================= -->
@@ -867,6 +995,15 @@
                     </label>
                 </div>
                 <div class="slide-error"><i class="fa-solid fa-circle-exclamation"></i> Please select your follower tier</div>
+
+                <div class="slide-action-row">
+                    <button type="button" class="btn-inline-prev" onclick="handlePrev()">
+                        <i class="fa-solid fa-arrow-left"></i> <span>Back</span>
+                    </button>
+                    <button type="button" class="btn-inline-next" onclick="handleNext()">
+                        <span>Next</span> <i class="fa-solid fa-arrow-right"></i>
+                    </button>
+                </div>
             </div>
 
             <!-- ================= SLIDE 4: Content Niche ================= -->
@@ -898,6 +1035,15 @@
                 </div>
 
                 <div class="slide-error"><i class="fa-solid fa-circle-exclamation"></i> Please select a content niche</div>
+
+                <div class="slide-action-row">
+                    <button type="button" class="btn-inline-prev" onclick="handlePrev()">
+                        <i class="fa-solid fa-arrow-left"></i> <span>Back</span>
+                    </button>
+                    <button type="button" class="btn-inline-next" onclick="handleNext()">
+                        <span>Next</span> <i class="fa-solid fa-arrow-right"></i>
+                    </button>
+                </div>
             </div>
 
             <!-- ================= SLIDE 5: Location (State & District) ================= -->
@@ -929,6 +1075,15 @@
                 </div>
 
                 <div class="slide-error"><i class="fa-solid fa-circle-exclamation"></i> Please select your district</div>
+
+                <div class="slide-action-row">
+                    <button type="button" class="btn-inline-prev" onclick="handlePrev()">
+                        <i class="fa-solid fa-arrow-left"></i> <span>Back</span>
+                    </button>
+                    <button type="button" class="btn-inline-next" onclick="handleNext()">
+                        <span>Next</span> <i class="fa-solid fa-arrow-right"></i>
+                    </button>
+                </div>
             </div>
 
             <!-- ================= SLIDE 6: Commercials / Collaboration Charges ================= -->
@@ -943,6 +1098,15 @@
                 <div class="slide-input-wrap">
                     <input type="text" name="commercials" id="commercials" class="slide-text-input" placeholder="e.g. ₹8,000 per Reel / Negotiable">
                     <div class="slide-error"><i class="fa-solid fa-circle-exclamation"></i> Please provide your commercial charges</div>
+                </div>
+
+                <div class="slide-action-row">
+                    <button type="button" class="btn-inline-prev" onclick="handlePrev()">
+                        <i class="fa-solid fa-arrow-left"></i> <span>Back</span>
+                    </button>
+                    <button type="button" class="btn-inline-next" onclick="handleNext()">
+                        <span>Next</span> <i class="fa-solid fa-arrow-right"></i>
+                    </button>
                 </div>
             </div>
 
@@ -959,6 +1123,15 @@
                     <input type="url" name="instagram_link" id="instagram_link" class="slide-text-input" placeholder="https://instagram.com/yourhandle">
                     <div class="slide-error"><i class="fa-solid fa-circle-exclamation"></i> Please enter your Instagram profile URL</div>
                 </div>
+
+                <div class="slide-action-row">
+                    <button type="button" class="btn-inline-prev" onclick="handlePrev()">
+                        <i class="fa-solid fa-arrow-left"></i> <span>Back</span>
+                    </button>
+                    <button type="button" class="btn-inline-next" onclick="handleNext()">
+                        <span>Next</span> <i class="fa-solid fa-arrow-right"></i>
+                    </button>
+                </div>
             </div>
 
             <!-- ================= SLIDE 8: Contact Number ================= -->
@@ -973,6 +1146,15 @@
                 <div class="slide-input-wrap">
                     <input type="tel" name="contact_number" id="contact_number" class="slide-text-input" placeholder="+91 98765 43210">
                     <div class="slide-error"><i class="fa-solid fa-circle-exclamation"></i> Please provide a valid phone number</div>
+                </div>
+
+                <div class="slide-action-row">
+                    <button type="button" class="btn-inline-prev" onclick="handlePrev()">
+                        <i class="fa-solid fa-arrow-left"></i> <span>Back</span>
+                    </button>
+                    <button type="button" class="btn-inline-next" id="btnSubmitInline" onclick="handleNext()">
+                        <span>Submit Application</span> <i class="fa-solid fa-paper-plane"></i>
+                    </button>
                 </div>
             </div>
 
@@ -1346,6 +1528,12 @@
             nextBtnText.textContent = 'Submitting...';
             nextBtnIcon.className = 'spinner';
 
+            const btnSubmitInline = document.getElementById('btnSubmitInline');
+            if (btnSubmitInline) {
+                btnSubmitInline.disabled = true;
+                btnSubmitInline.innerHTML = '<span>Submitting...</span> <span class="spinner" style="border-top-color:#070913; width:14px; height:14px; display:inline-block;"></span>';
+            }
+
             const formData = new FormData(creatorForm);
 
             fetch(creatorForm.action, {
@@ -1371,6 +1559,10 @@
                     btnNextAction.disabled = false;
                     nextBtnText.textContent = 'Submit Application';
                     nextBtnIcon.className = 'fa-solid fa-paper-plane';
+                    if (btnSubmitInline) {
+                        btnSubmitInline.disabled = false;
+                        btnSubmitInline.innerHTML = '<span>Submit Application</span> <i class="fa-solid fa-paper-plane"></i>';
+                    }
                 }
             })
             .catch(err => {
@@ -1386,8 +1578,34 @@
                 btnNextAction.disabled = false;
                 nextBtnText.textContent = 'Submit Application';
                 nextBtnIcon.className = 'fa-solid fa-paper-plane';
+                if (btnSubmitInline) {
+                    btnSubmitInline.disabled = false;
+                    btnSubmitInline.innerHTML = '<span>Submit Application</span> <i class="fa-solid fa-paper-plane"></i>';
+                }
             });
         }
+
+        // Touch swipe detection for mobile screens
+        let touchStartY = 0;
+        let touchEndY = 0;
+        document.addEventListener('touchstart', e => {
+            touchStartY = e.changedTouches[0].screenY;
+        }, { passive: true });
+
+        document.addEventListener('touchend', e => {
+            touchEndY = e.changedTouches[0].screenY;
+            if (['INPUT', 'SELECT', 'TEXTAREA'].includes(document.activeElement?.tagName)) {
+                return;
+            }
+            const diff = touchStartY - touchEndY;
+            if (diff > 60) {
+                // Swiped UP -> Next
+                handleNext();
+            } else if (diff < -60) {
+                // Swiped DOWN -> Prev
+                handlePrev();
+            }
+        }, { passive: true });
 
         // Restart button
         document.getElementById('btnRestart').addEventListener('click', () => {
@@ -1400,6 +1618,11 @@
             stateInput.value = 'Kerala';
             bottomBar.style.display = 'flex';
             btnNextAction.disabled = false;
+            const btnSubmitInline = document.getElementById('btnSubmitInline');
+            if (btnSubmitInline) {
+                btnSubmitInline.disabled = false;
+                btnSubmitInline.innerHTML = '<span>Submit Application</span> <i class="fa-solid fa-paper-plane"></i>';
+            }
             goToSlide(0);
         });
 
