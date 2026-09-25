@@ -908,10 +908,10 @@
                     </label>
 
                     <label class="choice-card" data-key="B">
-                        <input type="radio" name="instagram_followed" value="No, I’ll follow now">
+                        <input type="radio" name="instagram_followed" value="No">
                         <span class="choice-badge">B</span>
-                        <span class="choice-label">No, I’ll follow now</span>
-                        <i class="fa-brands fa-instagram choice-icon"></i>
+                        <span class="choice-label">No</span>
+                        <i class="fa-solid fa-xmark choice-icon"></i>
                     </label>
                 </div>
                 <div class="slide-error"><i class="fa-solid fa-circle-exclamation"></i> Please select an option</div>
