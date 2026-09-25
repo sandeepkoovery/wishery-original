@@ -893,8 +893,8 @@
                 </div>
                 <h2 class="q-title">
                     Have you followed <span class="gold-accent">WISHERY</span> on Instagram?
-                    <a href="https://www.instagram.com/wishery_in/" target="_blank" class="ig-visit-badge" title="Open @wishery_in on Instagram">
-                        <i class="fa-brands fa-instagram"></i> @wishery_in
+                    <a href="https://www.instagram.com/wishery._/" target="_blank" class="ig-visit-badge" title="Open @wishery._ on Instagram">
+                        <i class="fa-brands fa-instagram"></i> @wishery._
                     </a>
                 </h2>
                 <p class="q-desc">Connect with our primary channel to stay tuned on campaigns and creator shoutouts.</p>
