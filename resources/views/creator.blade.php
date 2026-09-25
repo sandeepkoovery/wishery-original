@@ -777,32 +777,9 @@
                 display: none;
             }
 
+            /* Hide duplicate bottom bar on mobile */
             .bottom-bar {
-                padding: 10px 16px;
-                padding-bottom: max(12px, env(safe-area-inset-bottom));
-            }
-
-            .bottom-hints {
-                display: none;
-            }
-
-            .nav-buttons {
-                width: 100%;
-                justify-content: space-between;
-                gap: 8px;
-            }
-
-            .btn-slide-nav {
-                width: 40px;
-                height: 40px;
-                border-radius: 10px;
-            }
-
-            .btn-primary-action {
-                flex: 1;
-                justify-content: center;
-                padding: 10px 14px;
-                font-size: 13.5px;
+                display: none !important;
             }
 
             .choices-grid {
@@ -811,8 +788,8 @@
             }
 
             .stage-container {
-                padding: 12px;
-                padding-bottom: 80px;
+                padding: 14px;
+                padding-bottom: 24px;
             }
 
             .slide {
