@@ -195,6 +195,8 @@
             box-sizing: border-box;
             max-height: calc(100dvh - 170px);
             overflow-y: auto;
+            -webkit-overflow-scrolling: touch;
+            overscroll-behavior-y: contain;
         }
 
         .slide::-webkit-scrollbar {
@@ -1294,10 +1296,15 @@
                 btnNextAction.style.display = 'inline-flex';
             }
 
-            // Auto focus active slide input
+            // Reset scroll position of active slide
             const activeSlide = slides[index];
-            const autoFocusInput = activeSlide.querySelector('input[type="text"], input[type="tel"], input[type="url"], select');
-            if (autoFocusInput) {
+            if (activeSlide) {
+                activeSlide.scrollTop = 0;
+            }
+
+            // Auto focus active slide input on desktop only (avoids viewport jump/keyboard pop on mobile)
+            const autoFocusInput = activeSlide?.querySelector('input[type="text"], input[type="tel"], input[type="url"], select');
+            if (autoFocusInput && window.innerWidth > 768) {
                 setTimeout(() => autoFocusInput.focus(), 300);
             }
         }
@@ -1562,27 +1569,7 @@
             });
         }
 
-        // Touch swipe detection for mobile screens
-        let touchStartY = 0;
-        let touchEndY = 0;
-        document.addEventListener('touchstart', e => {
-            touchStartY = e.changedTouches[0].screenY;
-        }, { passive: true });
 
-        document.addEventListener('touchend', e => {
-            touchEndY = e.changedTouches[0].screenY;
-            if (['INPUT', 'SELECT', 'TEXTAREA'].includes(document.activeElement?.tagName)) {
-                return;
-            }
-            const diff = touchStartY - touchEndY;
-            if (diff > 60) {
-                // Swiped UP -> Next
-                handleNext();
-            } else if (diff < -60) {
-                // Swiped DOWN -> Prev
-                handlePrev();
-            }
-        }, { passive: true });
 
         // Restart button
         document.getElementById('btnRestart').addEventListener('click', () => {
