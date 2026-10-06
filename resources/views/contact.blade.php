@@ -35,7 +35,7 @@
             <!-- Google Map -->
             <div class="map mt-4">
               <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5638.084165195368!2d76.27771669839113!3d9.995059800000002!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b080db7c57b631b%3A0x4e2c7d1c34a19539!2sInnerspace%20Coworking!5e1!3m2!1sen!2sin!4v1756288181102!5m2!1sen!2sin"
+                src="https://maps.google.com/maps?q=90%20A%2C%20Door%20no%2055%2F1171%2C%20Canal%20Road%2C%20Girinagar%2C%20Kadavanthara%2C%20Kadavanthara%20Police%20station%2C%20Ernakulam%20-%20682020%2C%20Kerala%2C%20India&t=&z=16&ie=UTF8&iwloc=&output=embed"
                 width="100%" height="250" style="border:0;" allowfullscreen="" loading="lazy"
                 referrerpolicy="no-referrer-when-downgrade"></iframe>
             </div>

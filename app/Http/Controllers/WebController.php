@@ -35,4 +35,9 @@ class WebController extends Controller
     {
         return view('faqs');
     }
+
+    public function privacyPolicy()
+    {
+        return view('privacy-policy');
+    }
 }

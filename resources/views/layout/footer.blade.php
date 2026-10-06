@@ -1,6 +1,6 @@
 <!-- Footer -->
 <footer>
-  <p>&copy; 2025 Wishery. All Rights Reserved.</p>
+  <p>&copy; {{ date('Y') }} Wishery. All Rights Reserved. | <a href="{{ route('privacy.policy') }}" style="color: inherit; text-decoration: none;">Privacy Policy</a></p>
 </footer>
 <div class="floating_btns">
     <a href="tel:+919207944882" target="_blank" class="phn_btn">

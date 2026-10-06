@@ -14,6 +14,10 @@ Route::get('/services', [WebController::class,'services'])->name('services');
 Route::get('/portfolio', [WebController::class,'portfolio'])->name('portfolio');
 Route::get('/contact', [WebController::class, 'contact'])->name('contact');
 Route::get('/faqs', [WebController::class, 'faqs'])->name('faqs');
+Route::get('/privacy-policy', [WebController::class, 'privacyPolicy'])->name('privacy.policy');
+Route::get('/privacy', function () {
+    return redirect()->route('privacy.policy');
+});
 Route::get('/faq', function () {
     return redirect()->route('faqs');
 });
