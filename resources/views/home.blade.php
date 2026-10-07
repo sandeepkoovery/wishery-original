@@ -1,6 +1,6 @@
 @extends('layout.app')
 
-@section('title', 'Digital Marketing, Business Technology & Creative Solutions | IUHAA Wishery')
+@section('title', 'Creative Digital Marketing Agency in Kochi, Kerala | Wishery')
 @section('meta_description', 'Wishery delivers integrated business technology, digital marketing, creative, advertising, and ERP solutions in Kochi, Kerala.')
 
 @section('content')
