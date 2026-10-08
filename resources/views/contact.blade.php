@@ -26,10 +26,10 @@
 
             <!-- Social Icons -->
             <div class="social-icons mt-4">
-              <a href="#" class="me-3"><i class="bi bi-facebook fs-4"></i></a>
-              <a href="#" class="me-3"><i class="bi bi-twitter fs-4"></i></a>
-              <a href="#" class="me-3"><i class="bi bi-instagram fs-4"></i></a>
-              <a href="#"><i class="bi bi-linkedin fs-4"></i></a>
+              <a href="https://www.facebook.com/profile.php?id=61563856282906" target="_blank" class="me-3"><i class="bi bi-facebook fs-4"></i></a>
+              <a href="https://www.instagram.com/wishery._/?hl=en" target="_blank" class="me-3"><i class="bi bi-instagram fs-4"></i></a>
+              <a href="https://www.linkedin.com/company/iuhaa-wishery-pvt-ltd/" target="_blank" class="me-3"><i class="bi bi-linkedin fs-4"></i></a>
+              <a href="https://www.youtube.com/@WISHERYPVT" target="_blank"><i class="bi bi-youtube fs-4"></i></a>
             </div>
 
             <!-- Google Map -->

@@ -449,8 +449,8 @@
                   <a href="https://www.linkedin.com/company/iuhaa-wishery-pvt-ltd/" target="_blank"><i
                         class="fab fa-linkedin"></i></a>
                   <a href="https://www.instagram.com/wishery._/?hl=en" target="_blank"><i class="fab fa-instagram"></i></a>
-                  <a href="#" target="_blank"><i class="fab fa-facebook-f"></i></a>
-                  <a href="#"><i class="fa-brands fa-youtube"></i></a>
+                  <a href="https://www.facebook.com/profile.php?id=61563856282906" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                  <a href="https://www.youtube.com/@WISHERYPVT" target="_blank"><i class="fa-brands fa-youtube"></i></a>
                </div>
             </div>
 
