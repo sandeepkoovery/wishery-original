@@ -8,6 +8,11 @@
       #contactForm label {
          color: #e2ba46;
       }
+
+      #homecontactForm {
+         max-width: 600px;
+         width: 100%;
+      }
       
       /* Main section headings */
       .section-main-heading {
@@ -455,68 +460,70 @@
             </div>
 
             <!-- Right Side: Form -->
-            <div class="col-lg-6">
-               <form id="homecontactForm" action="{{ route('contact.submit') }}" method="POST" novalidate>
-                  @csrf
-                  <div class="mb-3">
-                     <div class="d-flex align-items-center gap-2">
-                        <label class="me-2" style="width:80px">NAME</label>
-                        <div class="flex-grow-1">
-                           <input name="name" type="text" class="form-control custom-input" placeholder="Enter your name">
-                           <div class="invalid-feedback" id="error-name"></div>
+            <div class="col-lg-6 d-flex justify-content-center justify-content-lg-start px-3 px-lg-4">
+               <div style="max-width: 600px; width: 100%;">
+                  <form id="homecontactForm" action="{{ route('contact.submit') }}" method="POST" novalidate>
+                     @csrf
+                     <div class="mb-3">
+                        <div class="d-flex align-items-center gap-2">
+                           <label class="me-2" style="width:80px">NAME</label>
+                           <div class="flex-grow-1">
+                              <input name="name" type="text" class="form-control custom-input" placeholder="Enter your name">
+                              <div class="invalid-feedback" id="error-name"></div>
+                           </div>
                         </div>
                      </div>
-                  </div>
 
-                  <div class="mb-3">
-                     <div class="d-flex align-items-center gap-2">
-                        <label class="me-2" style="width:80px; white-space:nowrap;">PHONE</label>
-                        <div class="flex-grow-1">
-                           <input name="phone" type="text" class="form-control custom-input"
-                              placeholder="Enter your phone">
-                           <div class="invalid-feedback" id="error-phone"></div>
+                     <div class="mb-3">
+                        <div class="d-flex align-items-center gap-2">
+                           <label class="me-2" style="width:80px; white-space:nowrap;">PHONE</label>
+                           <div class="flex-grow-1">
+                              <input name="phone" type="text" class="form-control custom-input"
+                                 placeholder="Enter your phone">
+                              <div class="invalid-feedback" id="error-phone"></div>
+                           </div>
                         </div>
                      </div>
-                  </div>
 
-                  <div class="mb-3">
-                     <div class="d-flex align-items-center gap-2">
-                        <label class="me-2" style="width:80px">EMAIL</label>
-                        <div class="flex-grow-1">
-                           <input name="email" type="email" class="form-control custom-input"
-                              placeholder="Enter your email">
-                           <div class="invalid-feedback" id="error-email"></div>
+                     <div class="mb-3">
+                        <div class="d-flex align-items-center gap-2">
+                           <label class="me-2" style="width:80px">EMAIL</label>
+                           <div class="flex-grow-1">
+                              <input name="email" type="email" class="form-control custom-input"
+                                 placeholder="Enter your email">
+                              <div class="invalid-feedback" id="error-email"></div>
+                           </div>
                         </div>
                      </div>
-                  </div>
 
-                  <div class="mb-3">
-                     <div class="d-flex align-items-center gap-2">
-                        <label class="me-2" style="width:80px">INDUSTRY</label>
-                        <div class="flex-grow-1">
-                           <select name="business" class="form-control custom-input">
-                              <option value="">Select</option>
-                              <option value="E-commerce">E-commerce</option>
-                              <option value="Healthcare">Healthcare</option>
-                              <option value="Finance">Finance</option>
-                              <option value="Technology">Technology</option>
-                              <option value="Travel">Travel</option>
-                              <option value="Real Estate">Real Estate</option>
-                              <option value="Other">Other</option>
-                           </select>
-                           <div class="invalid-feedback" id="error-business"></div>
+                     <div class="mb-3">
+                        <div class="d-flex align-items-center gap-2">
+                           <label class="me-2" style="width:80px">INDUSTRY</label>
+                           <div class="flex-grow-1">
+                              <select name="business" class="form-control custom-input">
+                                 <option value="">Select</option>
+                                 <option value="E-commerce">E-commerce</option>
+                                 <option value="Healthcare">Healthcare</option>
+                                 <option value="Finance">Finance</option>
+                                 <option value="Technology">Technology</option>
+                                 <option value="Travel">Travel</option>
+                                 <option value="Real Estate">Real Estate</option>
+                                 <option value="Other">Other</option>
+                              </select>
+                              <div class="invalid-feedback" id="error-business"></div>
+                           </div>
                         </div>
                      </div>
-                  </div>
-                  <!-- Submit -->
-                  <div class="mb-3 d-flex align-items-center gap-2">
-                     <label class="me-2" style="width:80px"></label>
-                     <button type="submit" class="btn btn-primary custom-btn w-100">Submit</button>
-                  </div>
-               </form>
+                     <!-- Submit -->
+                     <div class="mb-3 d-flex align-items-center gap-2">
+                        <label class="me-2" style="width:80px"></label>
+                        <button type="submit" class="btn btn-primary custom-btn w-100">Submit</button>
+                     </div>
+                  </form>
 
-               <!-- Success message -->
-               <div id="success-message" class="alert alert-success d-none mt-2"></div>
+                  <!-- Success message -->
+                  <div id="success-message" class="alert alert-success d-none mt-2"></div>
+               </div>
             </div>
          </div>
       </div>

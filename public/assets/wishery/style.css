@@ -602,9 +602,12 @@ h2 {
   color: #fff;
 }
 
-.contact form {
+.contact form,
+#homecontactForm {
   margin: auto;
   border-radius: 30px;
+  max-width: 600px;
+  width: 100%;
 }
 
 .contact .left-info {
