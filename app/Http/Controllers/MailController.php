@@ -17,7 +17,8 @@ class MailController extends Controller
             'message' => ['required', 'string', 'max:5000'],
         ]);
 
-        Mail::to(env('ADMIN_EMAIL'))->send(new AdminNotification($validated));
+        $admin = config('mail.admin_address', env('ADMIN_EMAIL', 'iuhaawishery@gmail.com'));
+        Mail::to($admin)->send(new AdminNotification($validated));
         Mail::to($validated['email'])->send(new UserAcknowledgment($validated));
 
         return back()->with('success', 'Your message has been sent successfully!');
@@ -31,7 +32,8 @@ class MailController extends Controller
             'message' => ['required', 'string', 'max:5000'],
         ]);
 
-        Mail::to(env('ADMIN_EMAIL'))->send(new AdminNotification($validated));
+        $admin = config('mail.admin_address', env('ADMIN_EMAIL', 'iuhaawishery@gmail.com'));
+        Mail::to($admin)->send(new AdminNotification($validated));
         Mail::to($validated['email'])->send(new UserAcknowledgment($validated));
 
         return back()->with('success', 'Your message has been sent successfully!');

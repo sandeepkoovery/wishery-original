@@ -571,7 +571,8 @@
 
                form.reset();
             } else {
-               alert("Something went wrong. Please try again.");
+               let errData = await response.json().catch(() => null);
+               alert(errData?.message || "Something went wrong. Please try again.");
             }
          } catch (err) {
             console.error(err);
